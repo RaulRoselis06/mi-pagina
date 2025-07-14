@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recargas Free Fire - Multiplataformas E&M</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Fuente personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <!-- META Open Graph para previsualización en Facebook -->
+  <meta property="og:title" content="💎 Recarga Diamantes Free Fire - Multiplataformas E&M">
+  <meta property="og:description" content="Entrega inmediata, sin comisiones. Paga con Nequi. Atención por WhatsApp.">
+  <meta property="og:image" content="https://multiplataformas-eym.xyz/og-image.png">
+  <meta property="og:url" content="https://multiplataformas-eym.xyz">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Multiplataformas E&M">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #111;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .boton-whatsapp {
+      background-color: #25D366;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      text-align: center;
+      border-radius: 8px;
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .qr {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .qr img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .footer {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+    <img src="logo.png" alt="Logo Multiplataformas E&M" style="max-width: 200px; height: auto;">
+    </div>
+
+  <h1 style="font-family: 'Orbitron', sans-serif; font-size: 36px; font-weight: 700; color: #222222;">
+    💎 Recargas Free Fire 💎
+  </h1>
+
+  <p>Elige la cantidad de diamantes que deseas comprar:</p>
+  <select id="diamantes">
+    <option value="100 - $4.200">100 Diamantes – $4.200</option>
+    <option value="310 - $12.000">310 Diamantes – $12.000</option>
+    <option value="520 - $19.600">520 Diamantes – $19.600</option>
+    <option value="910 - $36.000">910 Diamantes – $36.000</option>
+    <option value="1.060 - $38.600">1.060 Diamantes – $38.600</option>
+    <option value="2.180 - $76.800">2.180 Diamantes – $76.800</option>
+    <option value="2.500 - $93.000">2.500 Diamantes – $93.000</option>
+    <option value="5.600 - $182.400">5.600 Diamantes – $182.400</option>
+  </select>
+
+  <label for="freefire_id">Ingresa tu ID de Free Fire:</label>
+  <input type="text" id="freefire_id"
+    placeholder="Solo números"
+    pattern="^[0-9]+$"
+    title="Solo se permiten números. No símbolos ni letras."
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    required>
+
+  <div class="qr">
+    <h3>¿Cómo pagar?</h3>
+    <p><strong>📱 Número Nequi para pagos: <span style="color:#25D366;">322 923 3629</span></strong></p>
+    <p>Haz clic en el siguiente enlace para ver el código QR de pago:</p>
+    <a href="file.jpeg" target="_blank" style="font-size: 16px; color: #007bff; text-decoration: underline;">
+      👉 Ver código QR para pagar desde otros Bancos
+    </a>
+    <br>
+    <a href="https://clientes.nequi.com.co/recargas" target="_blank" style="
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      padding: 18px 36px;
+      background-color: #0d9488;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 14px;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.3s;
+    ">
+      💰 Hacer pago desde otro banco (Nequi)
+    </a>
+
+    <p style="font-size: 14px; color: #555; text-align: center; max-width: 600px; margin: 10px auto;">
+      Este botón te lleva a la plataforma de pagos de Nequi, donde puedes hacer una <strong>transferencia desde cualquier banco de Colombia</strong> (Bancolombia, Daviplata, Davivienda, BBVA, etc.) hacia nuestra cuenta Nequi.<br><br>
+    </p>
+  </div>
+
+  <a id="boton" class="boton-whatsapp" href="#" target="_blank">Enviar pedido por WhatsApp</a>
+
+  <div class="footer">
+    💬 Después del pago, recuerda enviar la <strong>captura y tu ID</strong> por WhatsApp.
+  </div>
+
+  <script>
+    document.getElementById('boton').addEventListener('click', function (event) {
+      event.preventDefault();
+
+      const cantidad = document.getElementById('diamantes').value;
+      const id = document.getElementById('freefire_id').value.trim();
+      const telefono = "573229233629";
+
+      if (!id) {
+        alert("⚠️ Por favor ingresa tu ID de Free Fire.");
+        return;
+      }
+
+      const mensaje = `Hola, quiero recargar *${cantidad}*.\nMi ID de Free Fire es: *${id}*\nYa hice el pago y adjunto la captura.`;
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+
+      document.getElementById('freefire_id').value = '';
+    });
+  </script>
+<footer style="text-align: center; padding: 20px;">
+  <p>Visitas por país:</p>
+  <a href="https://info.flagcounter.com/rkWd">
+    <img src="https://s01.flagcounter.com/count2/rkWd/bg_E3FFFC/txt_000000/border_000000/columns_2/maxflags_12/viewers_Visitantes/labels_0/pageviews_0/flags_0/percent_0/" alt="Contador de visitas con banderas" style="max-width: 100%;">
+  </a>
+</footer>
+
+</body>
+
+<footer style="margin-top: 40px; padding: 15px; text-align: center; font-size: 14px; color: #aaa; border-top: 1px solid #ddd;">
+  © 2025 Multiplataformas E&M. Todos los derechos reservados.<br>
+  Sitio desarrollado para ventas de recargas Free Fire. <br>
+  Contacto: <a href="https://wa.me/573229233629" target="_blank">WhatsApp</a>
+</footer>
+</html>
